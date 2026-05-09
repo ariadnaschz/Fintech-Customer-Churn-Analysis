@@ -1,20 +1,19 @@
-# Optimización de la Retención en Ecosistemas Fintech
+# 🏦 Predictive Analytics: Detección de Fuga de Clientes (Churn) y Capital en Riesgo en Fintech
 
 ## 📊 Business Case
-En el entorno Fintech, el costo de adquisición de clientes es elevado. Este proyecto analiza el comportamiento transaccional y demográfico de 10,000 usuarios para predecir el riesgo de fuga (Churn) y proponer estrategias de reactivación basadas en el valor del cliente (LTV).
+En el entorno Fintech, el costo de adquisición de clientes (CAC) es elevado, pero el costo de retener a un cliente valioso es mínimo si se interviene a tiempo. Este proyecto no solo clasifica a los usuarios con riesgo de abandono, sino que cuantifica el **Impacto Financiero** de dicha fuga para priorizar los esfuerzos comerciales.
 
-## 🚀 Objetivos del Proyecto
-1. **Análisis Exploratorio (EDA):** Identificar patrones de inactividad.
-2. **Feature Engineering:** Crear métricas de negocio (LTV, Ratio Saldo/Producto).
-3. **Modelado Predictivo:** Clasificar usuarios con alta probabilidad de abandono.
-4. **Visualización Estratégica:** Dashboard en Power BI para toma de decisiones.
+## 🛠️ Metodología y Stack Tecnológico
+1. **Ingeniería de Datos (Python / Pandas):** - Limpieza de datos y Feature Engineering estratégico.
+   - Creación de variables de negocio como `Is_Zero_Balance` (para detectar "cuentas zombie") y `Tenure_Age_Ratio`.
+2. **Machine Learning (Scikit-Learn):** - Entrenamiento de un modelo `RandomForestClassifier`.
+   - Implementación de *Cross-Validation* y balanceo de clases (`class_weight='balanced'`) para combatir el 36% de inactividad oculta en el dataset.
+3. **Business Intelligence (Power BI / DAX):** - Diseño de un dashboard ejecutivo estructurado bajo la regla de 3 niveles (KPIs, Tendencias, Detalle Accionable).
 
-## 🛠️ Stack Tecnológico
-* **Python** (Pandas, Scikit-learn, Matplotlib/Seaborn)
-* **Power BI** (Visualización de datos)
-* **GitHub** (Control de versiones)
+## 🚀 Impacto de Negocio Descubierto
+Al cruzar las predicciones del modelo (Probabilidad de abandono > 75%) con los saldos de las cuentas, se detectó una exposición de capital de **$90.31 Millones** en riesgo de fuga inminente. 
 
-## 📁 Estado Actual
-- [x] Definición del Business Case.
-- [x] Configuración del entorno y repositorio.
-- [ ] Procesamiento de datos y Feature Engineering (En progreso).
+El modelo generó una lista de "Hot Leads" (Cuentas Críticas), permitiendo al equipo de retención ejecutar llamadas preventivas enfocadas exclusivamente en el segmento de mayor LTV (Lifetime Value), optimizando así el presupuesto operativo.
+
+## 🖥️ Dashboard
+![Dashboard](https://github.com/ariadnaschz/Fintech-Customer-Churn-Analysis/blob/main/Reports/figures/dashboard_preview.png?raw=true)
